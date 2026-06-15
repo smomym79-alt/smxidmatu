@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 620" role="img" aria-label="Pack decouverte SOXNA MOMY">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#f4d58d"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#111827" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="760" height="620" rx="54" fill="url(#a)"/>
+  <circle cx="120" cy="500" r="110" fill="#6f4e37" opacity=".12"/>
+  <circle cx="650" cy="130" r="90" fill="#111827" opacity=".08"/>
+  <g filter="url(#s)">
+    <rect x="170" y="180" width="210" height="270" rx="34" fill="#6f4e37"/>
+    <rect x="220" y="130" width="120" height="74" rx="22" fill="#20120c"/>
+    <rect x="200" y="250" width="150" height="112" rx="22" fill="#fffaf0"/>
+    <text x="275" y="295" text-anchor="middle" font-family="Arial" font-size="26" font-weight="900" fill="#20120c">KAFE</text>
+    <text x="275" y="326" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#6f4e37">TUUBAA</text>
+    <rect x="380" y="142" width="230" height="318" rx="48" fill="#f1c56a"/>
+    <rect x="416" y="108" width="158" height="64" rx="22" fill="#111827"/>
+    <rect x="410" y="230" width="170" height="118" rx="24" fill="#111827"/>
+    <text x="495" y="280" text-anchor="middle" font-family="Arial" font-size="24" font-weight="900" fill="#f4d58d">SOXNA</text>
+    <text x="495" y="312" text-anchor="middle" font-family="Arial" font-size="24" font-weight="900" fill="#fffaf0">MOMY</text>
+    <text x="380" y="518" text-anchor="middle" font-family="Arial" font-size="30" font-weight="900" fill="#111827">Pack decouverte</text>
+  </g>
+</svg>

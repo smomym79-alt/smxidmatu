@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 620" role="img" aria-label="Coffret cadeau SOXNA MOMY">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8ea"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#111827" flood-opacity=".30"/></filter>
+  </defs>
+  <rect width="760" height="620" rx="54" fill="url(#b)"/>
+  <g filter="url(#sh)">
+    <rect x="178" y="198" width="404" height="270" rx="34" fill="#111827"/>
+    <rect x="154" y="154" width="452" height="92" rx="28" fill="#c89b3c"/>
+    <rect x="348" y="132" width="64" height="356" rx="18" fill="#f4d58d"/>
+    <rect x="250" y="294" width="260" height="96" rx="24" fill="#fffaf0"/>
+    <text x="380" y="336" text-anchor="middle" font-family="Arial" font-size="30" font-weight="900" fill="#111827">SOXNA MOMY</text>
+    <text x="380" y="370" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#8a661f">Coffret cadeau</text>
+    <path d="M330 154c-56-60 20-98 50-18 30-80 106-42 50 18" fill="none" stroke="#f4d58d" stroke-width="18" stroke-linecap="round"/>
+  </g>
+</svg>

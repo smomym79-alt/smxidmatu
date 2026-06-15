@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 620" role="img" aria-label="Mockup produit SOXNA MOMY arachides enrobees">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#e2bd76"/>
+    </linearGradient>
+    <linearGradient id="jar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f1c56a"/>
+    </linearGradient>
+    <filter id="shadow2" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#120d05" flood-opacity=".25"/>
+    </filter>
+  </defs>
+  <rect width="760" height="620" rx="54" fill="url(#bg2)"/>
+  <circle cx="158" cy="496" r="116" fill="#0f172a" opacity=".10"/>
+  <circle cx="642" cy="132" r="82" fill="#c89b3c" opacity=".20"/>
+  <g filter="url(#shadow2)">
+    <rect x="244" y="118" width="272" height="430" rx="62" fill="url(#jar)"/>
+    <rect x="282" y="76" width="196" height="78" rx="26" fill="#111827"/>
+    <rect x="272" y="208" width="216" height="210" rx="34" fill="#111827"/>
+    <text x="380" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="900" fill="#f4d58d">SOXNA MOMY</text>
+    <text x="380" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fffaf0">Arachides</text>
+    <text x="380" y="346" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fffaf0">enrobees</text>
+    <g fill="#8b5a2b">
+      <ellipse cx="314" cy="462" rx="29" ry="19" transform="rotate(-24 314 462)"/>
+      <ellipse cx="380" cy="475" rx="31" ry="19" transform="rotate(15 380 475)"/>
+      <ellipse cx="443" cy="452" rx="29" ry="18" transform="rotate(-13 443 452)"/>
+    </g>
+    <path d="M314 462c12-8 24-8 34 0M380 475c12-8 25-8 35 0M443 452c11-8 23-8 33 0" stroke="#f4d58d" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+  </g>
+</svg>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boutique SOXNA MOMY — Café Tuubaa & Arachides enrobées</title>
+  <meta name="description" content="Boutique SOXNA MOMY : café KAFE TUUBAA (95% + poivre de Sélim), arachides enrobées croquantes, packs gourmands et coffrets cadeaux. Keur Massar, Dakar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span>SM</span>
+      <div><strong>SOXNA MOMY</strong><small>Boutique officielle</small></div>
+    </a>
+    <button class="menu" data-menu aria-label="Menu">☰</button>
+    <nav data-nav>
+      <a href="#articles">Catalogue</a>
+      <a href="#promesse">Qualité</a>
+      <a href="#commande">Commander</a>
+    </nav>
+    <button class="cart-button" data-cart-open><span>Panier</span><b data-cart-count>0</b></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Café 95% + Poivre de Sélim · Arachides Enrobées Croquantes</p>
+        <h1>Des produits SOXNA MOMY prêts à commander, offrir et revendre.</h1>
+        <p>Café KAFE TUUBAA et arachides enrobées croquantes — fabriqués avec soin à Keur Massar. Commandez directement, en famille ou en gros pour revendeurs.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#articles">Voir le catalogue</a>
+          <button class="btn ghost" data-cart-open>Ouvrir le panier</button>
+        </div>
+        <div class="proof-row">
+          <div><strong>9+</strong><span>produits</span></div>
+          <div><strong>24h</strong><span>réponse rapide</span></div>
+          <div><strong>Pro</strong><span>revendeurs</span></div>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-panel-top">
+          <span>Sélection premium</span>
+          <strong>SOXNA MOMY</strong>
+        </div>
+        <div class="hero-showcase">
+          <img class="hero-img hero-coffee"  src="mes%20images%20produits/photo_2026-06-15_18-14-36.jpg" alt="KAFE TUUBAA SOXNA MOMY 250g">
+          <img class="hero-img hero-peanuts" src="mes%20images%20produits/photo_2026-06-15_18-14-30.jpg" alt="Arachides enrobées croquantes SOXNA MOMY">
+        </div>
+      </div>
+    </section>
+
+    <section id="articles" class="section catalog-section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Catalogue</p>
+          <h2>Articles disponibles</h2>
+          <p>Ajoutez les produits au panier, ajustez les quantités et envoyez la commande par WhatsApp.</p>
+        </div>
+        <div class="tools">
+          <input type="search" data-search placeholder="Rechercher un article…">
+          <select data-filter>
+            <option value="all">Toutes catégories</option>
+            <option value="cafe">Café</option>
+            <option value="arachides">Arachides</option>
+            <option value="packs">Packs &amp; Coffrets</option>
+          </select>
+        </div>
+      </div>
+      <div class="products" data-products></div>
+    </section>
+
+    <section id="promesse" class="section promise">
+      <div class="promise-copy">
+        <p class="eyebrow">Pourquoi commander chez nous</p>
+        <h2>Une qualité artisanale, une commande rapide et fluide.</h2>
+        <p>Café 95% pur + poivre de Sélim, arachides enrobées croquantes faites maison. Livraison et commande directe depuis Keur Massar.</p>
+      </div>
+      <div class="promise-grid">
+        <article>
+          <span>01</span>
+          <h3>Commande fluide</h3>
+          <p>Le panier calcule automatiquement le total et prépare le message WhatsApp en un clic.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Formats pour tous</h3>
+          <p>Petits formats, grands formats familiaux, packs découverte et coffrets cadeaux élégants.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Revendeurs bienvenus</h3>
+          <p>Commandes en gros disponibles pour boutiques, marchés et zones de revente.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="commande" class="section order-cta">
+      <div>
+        <p class="eyebrow">Commande rapide</p>
+        <h2>Votre commande est prête en quelques clics.</h2>
+        <p>Indiquez votre nom, téléphone et adresse dans le panier. Le message WhatsApp sera généré automatiquement.</p>
+      </div>
+      <button class="btn primary" data-cart-open>Finaliser une commande</button>
+    </section>
+  </main>
+
+  <aside class="cart" data-cart>
+    <div class="cart-head">
+      <div><span>Commande</span><h2>Votre panier</h2></div>
+      <button data-cart-close aria-label="Fermer">×</button>
+    </div>
+    <div class="cart-items" data-cart-items></div>
+    <div class="cart-total">
+      <span>Total commande</span>
+      <strong data-cart-total>0 FCFA</strong>
+    </div>
+    <input  class="customer-input" data-customer-name  placeholder="Votre nom">
+    <input  class="customer-input" data-customer-phone placeholder="Téléphone">
+    <textarea class="customer-input" data-customer-note placeholder="Adresse ou note de livraison"></textarea>
+    <a class="btn whatsapp" data-whatsapp target="_blank" rel="noreferrer">
+      Envoyer sur WhatsApp
+    </a>
+    <button class="btn ghost full" data-clear>Vider le panier</button>
+  </aside>
+  <div class="overlay" data-overlay></div>
+
+  <footer>
+    <div class="footer-brand">
+      <strong>SOXNA MOMY</strong>
+      <p>Boutique officielle<br>Café, arachides enrobées,<br>packs et coffrets gourmands</p>
+    </div>
+    <div>
+      <h4>Catalogue</h4>
+      <a href="#articles">Café KAFE TUUBAA</a>
+      <a href="#articles">Arachides enrobées</a>
+      <a href="#articles">Packs &amp; Coffrets</a>
+      <a href="#commande">Passer une commande</a>
+    </div>
+    <div>
+      <h4>Contact &amp; Localisation</h4>
+      <address>
+        <span>+221 76 943 78 33</span>
+        <span>+221 78 263 56 10</span>
+        <span>Keur Massar</span>
+        <span>Route du Lac Rose, Dakar</span>
+      </address>
+    </div>
+  </footer>
+
+  <script src="js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 620" role="img" aria-label="Mockup produit KAFE TUUBAA SOXNA MOMY">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8ea"/>
+      <stop offset="1" stop-color="#d8a45b"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a1f14"/>
+      <stop offset=".55" stop-color="#6f4e37"/>
+      <stop offset="1" stop-color="#1b120d"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#1b120d" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="760" height="620" rx="54" fill="url(#bg)"/>
+  <circle cx="122" cy="118" r="72" fill="#fffaf0" opacity=".55"/>
+  <circle cx="650" cy="500" r="118" fill="#6f4e37" opacity=".14"/>
+  <g filter="url(#shadow)">
+    <path d="M245 102h270l58 430c7 48-28 88-76 88H264c-48 0-83-40-76-88l57-430Z" fill="url(#bag)"/>
+    <path d="M282 74h198c23 0 42 19 42 42v36H240v-36c0-23 19-42 42-42Z" fill="#20120c"/>
+    <path d="M250 178h260c23 0 42 19 42 42v182c0 23-19 42-42 42H250c-23 0-42-19-42-42V220c0-23 19-42 42-42Z" fill="#fff8ea"/>
+    <text x="380" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#1b120d">KAFE TUUBAA</text>
+    <text x="380" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#6f4e37">SOXNA MOMY</text>
+    <path d="M307 332c44-62 102-62 146 0 24 34-1 79-43 79h-60c-42 0-66-45-43-79Z" fill="#6f4e37"/>
+    <path d="M343 344c8-31 50-31 58 0" fill="none" stroke="#fff8ea" stroke-width="13" stroke-linecap="round"/>
+    <text x="380" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff8ea">Cafe en poudre</text>
+  </g>
+</svg>
