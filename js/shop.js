@@ -54,15 +54,15 @@ const products = [
     id: 'pack-duo', name: 'Pack Découverte SOXNA MOMY', category: 'packs', categoryLabel: 'Pack',
     price: 3500, badge: 'Nouveauté',
     image: 'mes%20images%20produits/1.jpg',
-    desc: 'Café KAFE TUUBAA 250g + Arachides 250g. Le duo parfait pour découvrir la marque.',
-    details: 'Le Duo Parfait SOXNA MOMY : Café KAFE TUUBAA 250g + Arachides enrobées croquantes 250g réunis dans un seul pack. Deux produits emblématiques pour découvrir tout ce que la marque a à offrir. Idéal pour offrir à un proche, tester la marque ou en faire un cadeau accessible et savoureux.'
+    desc: 'KAFE TUUBAA SOXNA MOMY 250g + Arachides 250g. Le duo parfait pour découvrir la marque.',
+    details: 'Le Duo Parfait SOXNA MOMY : KAFE TUUBAA SOXNA MOMY 250g + Arachides enrobées croquantes 250g réunis dans un seul pack. Deux produits emblématiques pour découvrir tout ce que la marque a à offrir. Idéal pour offrir à un proche, tester la marque ou en faire un cadeau accessible et savoureux.'
   },
   {
     id: 'coffret', name: 'Coffret Cadeau Gourmand', category: 'packs', categoryLabel: 'Pack',
     price: 15000, badge: 'Premium',
     image: 'mes%20images%20produits/photo_2026-06-15_18-13-07.jpg',
     desc: 'Assortiment élégant de nos meilleurs produits pour cadeau, cérémonie ou entreprise.',
-    details: 'Coffret gourmand premium SOXNA MOMY — notre assortiment le plus complet, présenté dans un emballage élégant et soigné. Inclut plusieurs formats de café KAFE TUUBAA et d\'arachides enrobées. Parfait pour les cérémonies, les entreprises souhaitant offrir un cadeau local authentique, et les occasions de prestige.'
+    details: 'Coffret gourmand premium SOXNA MOMY — notre assortiment le plus complet, présenté dans un emballage élégant et soigné. Inclut plusieurs formats de KAFE TUUBAA SOXNA MOMY et d\'arachides enrobées. Parfait pour les cérémonies, les entreprises souhaitant offrir un cadeau local authentique, et les occasions de prestige.'
   }
 ];
 
