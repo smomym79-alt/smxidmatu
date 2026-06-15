@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#bf8f2c">
   <title>Boutique SOXNA MOMY — Café Tuubaa & Arachides enrobées</title>
   <meta name="description" content="Boutique SOXNA MOMY : café KAFE TUUBAA (95% + poivre de Sélim), arachides enrobées croquantes, packs gourmands et coffrets cadeaux. Keur Massar, Dakar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="css/shop.css">
 </head>
 <body>
+
   <header class="topbar">
     <a class="brand" href="#">
       <span>SM</span>
@@ -22,6 +24,10 @@
       <a href="#promesse">Qualité</a>
       <a href="#commande">Commander</a>
     </nav>
+    <a href="tel:+221769437833" class="phone-btn" aria-label="Appeler">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+221 76 943 78 33</span>
+    </a>
     <button class="cart-button" data-cart-open><span>Panier</span><b data-cart-count>0</b></button>
   </header>
 
@@ -36,9 +42,9 @@
           <button class="btn ghost" data-cart-open>Ouvrir le panier</button>
         </div>
         <div class="proof-row">
-          <div><strong>9+</strong><span>produits</span></div>
-          <div><strong>24h</strong><span>réponse rapide</span></div>
-          <div><strong>Pro</strong><span>revendeurs</span></div>
+          <div><strong>100%</strong><span>naturel</span></div>
+          <div><strong>Art.</strong><span>artisanal</span></div>
+          <div><strong>Dakar</strong><span>Keur Massar</span></div>
         </div>
       </div>
       <div class="hero-panel">
@@ -48,7 +54,7 @@
         </div>
         <div class="hero-showcase">
           <img class="hero-img hero-coffee"  src="mes%20images%20produits/photo_2026-06-15_18-14-36.jpg" alt="KAFE TUUBAA SOXNA MOMY 250g">
-          <img class="hero-img hero-peanuts" src="mes%20images%20produits/photo_2026-06-15_18-14-30.jpg" alt="Arachides enrobées croquantes SOXNA MOMY">
+          <img class="hero-img hero-peanuts" src="mes%20images%20produits/photo_2026-06-15_20-00-42.jpg" alt="Arachides enrobées croquantes SOXNA MOMY">
         </div>
       </div>
     </section>
@@ -58,7 +64,7 @@
         <div>
           <p class="eyebrow">Catalogue</p>
           <h2>Articles disponibles</h2>
-          <p>Ajoutez les produits au panier, ajustez les quantités et envoyez la commande par WhatsApp.</p>
+          <p>Cliquez sur un produit pour voir le détail. Ajoutez au panier et envoyez la commande par WhatsApp.</p>
         </div>
         <div class="tools">
           <input type="search" data-search placeholder="Rechercher un article…">
@@ -81,17 +87,17 @@
       </div>
       <div class="promise-grid">
         <article>
-          <span>01</span>
+          <span class="icon">☕</span>
           <h3>Commande fluide</h3>
           <p>Le panier calcule automatiquement le total et prépare le message WhatsApp en un clic.</p>
         </article>
         <article>
-          <span>02</span>
+          <span class="icon">📦</span>
           <h3>Formats pour tous</h3>
-          <p>Petits formats, grands formats familiaux, packs découverte et coffrets cadeaux élégants.</p>
+          <p>Petits sachets, pots moyens, grands formats familiaux, packs et coffrets élégants.</p>
         </article>
         <article>
-          <span>03</span>
+          <span class="icon">🏪</span>
           <h3>Revendeurs bienvenus</h3>
           <p>Commandes en gros disponibles pour boutiques, marchés et zones de revente.</p>
         </article>
@@ -104,10 +110,14 @@
         <h2>Votre commande est prête en quelques clics.</h2>
         <p>Indiquez votre nom, téléphone et adresse dans le panier. Le message WhatsApp sera généré automatiquement.</p>
       </div>
-      <button class="btn primary" data-cart-open>Finaliser une commande</button>
+      <button class="btn whatsapp" data-cart-open>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Commander sur WhatsApp
+      </button>
     </section>
   </main>
 
+  <!-- CART PANEL -->
   <aside class="cart" data-cart>
     <div class="cart-head">
       <div><span>Commande</span><h2>Votre panier</h2></div>
@@ -121,12 +131,32 @@
     <input  class="customer-input" data-customer-name  placeholder="Votre nom">
     <input  class="customer-input" data-customer-phone placeholder="Téléphone">
     <textarea class="customer-input" data-customer-note placeholder="Adresse ou note de livraison"></textarea>
-    <a class="btn whatsapp" data-whatsapp target="_blank" rel="noreferrer">
+    <a class="btn whatsapp" data-whatsapp href="#" target="_blank" rel="noreferrer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
       Envoyer sur WhatsApp
     </a>
     <button class="btn ghost full" data-clear>Vider le panier</button>
   </aside>
   <div class="overlay" data-overlay></div>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-backdrop" data-modal-backdrop>
+    <div class="modal">
+      <button class="modal-close" data-modal-close aria-label="Fermer">×</button>
+      <div class="modal-img-wrap">
+        <img data-modal-img src="" alt="">
+      </div>
+      <div class="modal-body">
+        <span data-modal-badge class="product-badge"></span>
+        <h2 class="modal-name" data-modal-name></h2>
+        <p class="modal-details" data-modal-details></p>
+        <div class="modal-footer">
+          <strong class="modal-price" data-modal-price></strong>
+          <button class="btn primary" data-modal-add data-add="">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-brand">
@@ -143,11 +173,14 @@
     <div>
       <h4>Contact &amp; Localisation</h4>
       <address>
-        <span>+221 76 943 78 33</span>
-        <span>+221 78 263 56 10</span>
+        <a href="tel:+221769437833">+221 76 943 78 33</a>
         <span>Keur Massar</span>
         <span>Route du Lac Rose, Dakar</span>
       </address>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SOXNA MOMY · Keur Massar, Dakar</span>
+      <span>Artisanal · 100% naturel · Fait au Sénégal 🇸🇳</span>
     </div>
   </footer>
 
