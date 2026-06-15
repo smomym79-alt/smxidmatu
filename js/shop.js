@@ -2,21 +2,21 @@ const phoneNumber = '221769437833';
 
 const products = [
   {
-    id: 'cafe-250', name: 'KAFE TUUBAA 250g', category: 'cafe', categoryLabel: 'Café',
+    id: 'cafe-250', name: 'KAFE TUUBAA SOXNA MOMY 250g', category: 'cafe', categoryLabel: 'Café',
     price: 2000, badge: 'Populaire',
     image: 'mes%20images%20produits/photo_2026-06-15_18-14-36.jpg',
     desc: 'Café 95% + poivre de Sélim. Format idéal pour la maison et les petites commandes.',
     details: 'Café en poudre composé à 95% de café pur et 5% de poivre de Sélim — un mélange unique qui donne à KAFE TUUBAA son arôme distinctif et ses bienfaits reconnus. Sachet kraft doré 250g, idéal pour la maison, pour offrir ou commencer à revendre. Préparé artisanalement à Keur Massar, Route du Lac Rose.'
   },
   {
-    id: 'cafe-500', name: 'KAFE TUUBAA 500g', category: 'cafe', categoryLabel: 'Café',
+    id: 'cafe-500', name: 'KAFE TUUBAA SOXNA MOMY 500g', category: 'cafe', categoryLabel: 'Café',
     price: 3500, badge: null,
     image: 'mes%20images%20produits/photo_2026-06-15_18-14-41.jpg',
     desc: 'Café 95% + poivre de Sélim. Format équilibré pour familles et revendeurs.',
     details: 'Café 95% pur + poivre de Sélim. Sachet aluminium 500g — le format équilibré pour une consommation familiale régulière ou les revendeurs débutants. Goût intense, arôme unique, bienfaits reconnus. Idéal pour les boutiques qui souhaitent proposer KAFE TUUBAA à leur clientèle.'
   },
   {
-    id: 'cafe-1kg', name: 'KAFE TUUBAA 1kg', category: 'cafe', categoryLabel: 'Café',
+    id: 'cafe-1kg', name: 'KAFE TUUBAA SOXNA MOMY 1kg', category: 'cafe', categoryLabel: 'Café',
     price: 6500, badge: 'Sur commande',
     image: 'mes%20images%20produits/photo_2026-06-15_18-14-54.jpg',
     desc: 'Café 95% + poivre de Sélim. Grand format pour consommation familiale ou revente.',
@@ -246,6 +246,28 @@ document.addEventListener('click', (e) => {
   if (e.target.matches('[data-modal-backdrop]')) closeModal();
 });
 
+// Category nav: filter + scroll on click
+document.querySelectorAll('[data-cat]').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const cat = link.dataset.cat;
+    qs('[data-filter]').value = cat;
+    renderProducts();
+    qs('#articles')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelectorAll('[data-cat]').forEach((l) => l.classList.remove('active'));
+    link.classList.add('active');
+    qs('[data-nav]')?.classList.remove('open');
+  });
+});
+
+// Sync cat-nav active state when select changes
+function syncCatNav() {
+  const val = qs('[data-filter]').value;
+  document.querySelectorAll('[data-cat]').forEach((l) => {
+    l.classList.toggle('active', l.dataset.cat === val);
+  });
+}
+
 // Close mobile nav when a link is clicked
 document.querySelectorAll('[data-nav] a').forEach((a) =>
   a.addEventListener('click', () => qs('[data-nav]')?.classList.remove('open'))
@@ -258,7 +280,7 @@ document.addEventListener('keydown', (e) => {
 
 qs('[data-menu]')?.addEventListener('click', () => qs('[data-nav]')?.classList.toggle('open'));
 qs('[data-search]').addEventListener('input', renderProducts);
-qs('[data-filter]').addEventListener('change', renderProducts);
+qs('[data-filter]').addEventListener('change', () => { syncCatNav(); renderProducts(); });
 document.querySelectorAll('.customer-input').forEach((el) => el.addEventListener('input', updateWhatsapp));
 
 renderProducts();
