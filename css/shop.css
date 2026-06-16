@@ -97,6 +97,7 @@ h1,h2{font-family:'DM Serif Display',Georgia,serif}
 .product-card:hover img{transform:scale(1.07)}
 .card-hover-hint{position:absolute;inset:0;background:rgba(2,16,8,.48);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:.9rem;opacity:0;transition:opacity .25s;letter-spacing:.05em}
 .product-card:hover .card-hover-hint{opacity:1}
+.product-card:has(.badge-cafe) img{object-fit:contain;padding:16px}
 
 /* Badges catégorie */
 .product-badge{position:absolute;left:12px;top:12px;border-radius:999px;padding:6px 14px;font-size:.72rem;font-weight:900;z-index:2;letter-spacing:.04em}
