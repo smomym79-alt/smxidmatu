@@ -125,6 +125,9 @@ h1,h2{font-family:'DM Serif Display',Georgia,serif}
 .add{width:46px;height:46px;border-radius:14px;border:0;background:var(--forest);color:white;font-size:1.1rem;cursor:pointer;transition:.2s;flex-shrink:0;display:grid;place-items:center;font-weight:900}
 .add:hover{background:var(--gold);color:#17110a;transform:scale(1.07)}
 .add.in-cart{background:var(--gold);color:#17110a;font-size:.95rem}
+.price-eur{display:block;font-size:.76rem;color:var(--muted);font-weight:700;margin-top:1px}
+.modal-price .price-eur{display:block;font-size:1rem;margin-top:3px}
+.cart-total strong .price-eur{display:block;font-size:.88rem;margin-top:1px}
 .no-results{color:var(--muted);grid-column:1/-1;text-align:center;padding:48px 0;font-size:1.05rem}
 
 /* ── MODAL ── */

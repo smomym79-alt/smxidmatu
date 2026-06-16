@@ -3,63 +3,63 @@ const phoneNumber = '221769437833';
 const products = [
   {
     id: 'cafe-250', name: 'KAFE TUUBAA SOXNA MOMY 250g', category: 'cafe', categoryLabel: 'Café',
-    price: 2000, badge: 'Populaire',
+    price: 2000, eur: 3, badge: 'Populaire',
     image: 'mes%20images%20produits/photo_2026-06-15_18-14-36.jpg',
     desc: 'Café 95% + poivre de Sélim. Format idéal pour la maison et les petites commandes.',
     details: 'Café en poudre composé à 95% de café pur et 5% de poivre de Sélim — un mélange unique qui donne à KAFE TUUBAA son arôme distinctif et ses bienfaits reconnus. Sachet kraft doré 250g, idéal pour la maison, pour offrir ou commencer à revendre. Préparé artisanalement à Keur Massar, Route du Lac Rose.'
   },
   {
     id: 'cafe-500', name: 'KAFE TUUBAA SOXNA MOMY 500g', category: 'cafe', categoryLabel: 'Café',
-    price: 3500, badge: null,
+    price: 3500, eur: 6, badge: null,
     image: 'mes%20images%20produits/caf%C3%A9500g.png',
     desc: 'Café 95% + poivre de Sélim. Format équilibré pour familles et revendeurs.',
     details: 'Café 95% pur + poivre de Sélim. Sachet aluminium 500g — le format équilibré pour une consommation familiale régulière ou les revendeurs débutants. Goût intense, arôme unique, bienfaits reconnus. Idéal pour les boutiques qui souhaitent proposer KAFE TUUBAA à leur clientèle.'
   },
   {
     id: 'cafe-1kg', name: 'KAFE TUUBAA SOXNA MOMY 1kg', category: 'cafe', categoryLabel: 'Café',
-    price: 6500, badge: null,
+    price: 6500, eur: 10, badge: null,
     image: 'mes%20images%20produits/cafe1kg.png',
     desc: 'Café 95% + poivre de Sélim. Grand format pour consommation familiale ou revente.',
     details: 'Café 95% pur + poivre de Sélim. Grand sachet kraft 1kg — le format idéal pour la revente en boutique ou une forte consommation familiale. Préparez votre commande à l\'avance, ce format est fabriqué sur commande. Contactez-nous via WhatsApp pour délai et disponibilité.'
   },
   {
     id: 'arach-150', name: 'Arachides enrobées 150g', category: 'arachides', categoryLabel: 'Arachides',
-    price: 1000, badge: 'Populaire',
+    price: 1000, eur: 1.5, badge: 'Populaire',
     image: 'mes%20images%20produits/arachide150g.png',
     desc: 'Sachet souple 150g. Snack croquant parfait pour les pauses et la vente en boutique.',
     details: 'Arachides enrobées croquantes SOXNA MOMY — format sachet souple transparent 150g. Pratique, léger, facile à glisser dans un sac ou à disposer en boutique. Le snack préféré des amateurs de saveurs authentiques. Idéal pour les revendeurs de rue, les boutiques et les occasions.'
   },
   {
     id: 'arach-250', name: 'Arachides enrobées 250g', category: 'arachides', categoryLabel: 'Arachides',
-    price: 1750, badge: 'Nouveauté',
+    price: 1750, eur: 2.5, badge: 'Nouveauté',
     image: 'mes%20images%20produits/arachide250g.png',
     desc: 'Pot moyen 250g. Idéal pour offrir ou partager lors d\'un événement.',
     details: 'Arachides enrobées croquantes SOXNA MOMY — pot moyen transparent 250g avec étiquette officielle. Un format parfait pour offrir à un proche, poser sur une table lors d\'un événement ou revendre en boutique avec une belle présentation. Produit artisanal, fabriqué à Keur Massar.'
   },
   {
     id: 'arach-500', name: 'Arachides enrobées 500g', category: 'arachides', categoryLabel: 'Arachides',
-    price: 3500, badge: null,
+    price: 3500, eur: 5, badge: null,
     image: 'mes%20images%20produits/arachide500g.png',
     desc: 'Grand pot 500g. Notre format le plus vendu pour familles et revendeurs.',
     details: 'Arachides enrobées croquantes SOXNA MOMY — grand pot rectangulaire 500g. Notre format le plus vendu, plébiscité par les familles et les revendeurs. Présentation soignée avec étiquette SOXNA MOMY bien visible. Idéal pour les boutiques, marchés et grandes occasions.'
   },
   {
     id: 'arach-1kg', name: 'Arachides enrobées 1kg', category: 'arachides', categoryLabel: 'Arachides',
-    price: 6500, badge: 'Sur commande',
+    price: 6500, eur: 10, badge: 'Sur commande',
     image: 'mes%20images%20produits/photo_2026-06-15_18-14-27.jpg',
     desc: 'Grand format 1kg. Pour commandes importantes et grossistes.',
     details: 'Arachides enrobées croquantes SOXNA MOMY — grand format 1kg. Disponible pour les commandes importantes : boutiques, grossistes, événements. Contactez-nous directement via WhatsApp pour la disponibilité, les délais et les conditions de gros. Tarifs préférentiels pour volumes importants.'
   },
   {
     id: 'pack-duo', name: 'Pack Découverte SOXNA MOMY', category: 'packs', categoryLabel: 'Pack',
-    price: 3500, badge: 'Nouveauté',
+    price: 3500, eur: 5, badge: 'Nouveauté',
     image: 'mes%20images%20produits/1.jpg',
     desc: 'KAFE TUUBAA SOXNA MOMY 250g + Arachides 250g. Le duo parfait pour découvrir la marque.',
     details: 'Le Duo Parfait SOXNA MOMY : KAFE TUUBAA SOXNA MOMY 250g + Arachides enrobées croquantes 250g réunis dans un seul pack. Deux produits emblématiques pour découvrir tout ce que la marque a à offrir. Idéal pour offrir à un proche, tester la marque ou en faire un cadeau accessible et savoureux.'
   },
   {
     id: 'coffret', name: 'Coffret Cadeau Gourmand', category: 'packs', categoryLabel: 'Pack',
-    price: 15000, badge: 'Premium',
+    price: 15000, eur: 22, badge: 'Premium',
     image: 'mes%20images%20produits/photo_2026-06-15_18-13-07.jpg',
     desc: 'Assortiment élégant de nos meilleurs produits pour cadeau, cérémonie ou entreprise.',
     details: 'Coffret gourmand premium SOXNA MOMY — notre assortiment le plus complet, présenté dans un emballage élégant et soigné. Inclut plusieurs formats de KAFE TUUBAA SOXNA MOMY et d\'arachides enrobées. Parfait pour les cérémonies, les entreprises souhaitant offrir un cadeau local authentique, et les occasions de prestige.'
@@ -70,6 +70,13 @@ const state = { cart: JSON.parse(localStorage.getItem('soxnaCart') || '{}') };
 
 const money = (v) => new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 }).format(v) + ' FCFA';
 const qs = (s) => document.querySelector(s);
+
+function moneyEur(eur) {
+  if (window.SMX.getLang() === 'fr') return '';
+  const sep = window.SMX.getLang() === 'es' ? ',' : '.';
+  const fmt = eur % 1 === 0 ? `${eur} €` : `${eur.toFixed(2).replace('.', sep)} €`;
+  return `≈ ${fmt}`;
+}
 
 
 function saveCart() {
@@ -102,7 +109,10 @@ function renderProducts() {
             <h3>${lp.name}</h3>
             <p>${lp.desc}</p>
             <div class="price-row">
-              <strong class="price">${money(p.price)}</strong>
+              <div>
+                <strong class="price">${money(p.price)}</strong>
+                ${moneyEur(p.eur) ? `<small class="price-eur">${moneyEur(p.eur)}</small>` : ''}
+              </div>
               <button class="add${qty > 0 ? ' in-cart' : ''}" data-add="${p.id}" aria-label="${lp.name}">${qty > 0 ? `×${qty}` : '+'}</button>
             </div>
           </div>
@@ -138,7 +148,9 @@ function updateCart() {
   qs('[data-cart-count]').textContent = count;
   const mobileCount = qs('[data-mobile-cart-count]');
   if (mobileCount) mobileCount.textContent = count;
-  qs('[data-cart-total]').textContent = money(total);
+  const eurTotal = items.reduce((s, i) => s + (i.eur || 0) * i.qty, 0);
+  const eurTotalStr = moneyEur(eurTotal);
+  qs('[data-cart-total]').innerHTML = money(total) + (eurTotalStr ? `<small class="price-eur">${eurTotalStr}</small>` : '');
   qs('[data-cart-items]').innerHTML = items.length
     ? items.map((item) => {
         const lp = window.SMX.tProduct(item.id);
@@ -173,7 +185,9 @@ function updateWhatsapp() {
     const lp = window.SMX.tProduct(i.id);
     return `- ${lp.name} ×${i.qty} = ${money(i.qty * i.price)}`;
   }).join('%0A');
-  const msg = `${T('wa.hello')}%0A%0A${T('wa.order')}%0A${lines || T('wa.empty')}%0A%0A*${T('wa.total')} ${money(total)}*%0A${T('wa.name')} ${name}%0A${T('wa.phone')} ${phone}%0A${T('wa.note')} ${note}`;
+  const waEurTotal = items.reduce((s, i) => s + (i.eur || 0) * i.qty, 0);
+  const waEurStr = moneyEur(waEurTotal) ? ` (${moneyEur(waEurTotal)})` : '';
+  const msg = `${T('wa.hello')}%0A%0A${T('wa.order')}%0A${lines || T('wa.empty')}%0A%0A*${T('wa.total')} ${money(total)}${waEurStr}*%0A${T('wa.name')} ${name}%0A${T('wa.phone')} ${phone}%0A${T('wa.note')} ${note}`;
   const btn = qs('[data-whatsapp]');
   btn.href = `https://wa.me/${phoneNumber}?text=${msg}`;
   const empty = items.length === 0;
@@ -193,7 +207,8 @@ function openModal(product) {
   badgeEl.className = `product-badge badge-${product.category}`;
   qs('[data-modal-name]').textContent = lp.name;
   qs('[data-modal-details]').textContent = lp.details;
-  qs('[data-modal-price]').textContent = money(product.price);
+  const eurStr = moneyEur(product.eur);
+  qs('[data-modal-price]').innerHTML = money(product.price) + (eurStr ? `<small class="price-eur">${eurStr}</small>` : '');
   qs('[data-modal-add]').dataset.add = product.id;
   backdrop.classList.add('show');
   document.body.style.overflow = 'hidden';
