@@ -140,6 +140,8 @@ function updateCart() {
   const count = items.reduce((s, i) => s + i.qty, 0);
   const total = items.reduce((s, i) => s + i.qty * i.price, 0);
   qs('[data-cart-count]').textContent = count;
+  const mobileCount = qs('[data-mobile-cart-count]');
+  if (mobileCount) mobileCount.textContent = count;
   qs('[data-cart-total]').textContent = money(total);
   qs('[data-cart-items]').innerHTML = items.length
     ? items.map((item) => `
