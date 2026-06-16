@@ -71,12 +71,6 @@ const state = { cart: JSON.parse(localStorage.getItem('soxnaCart') || '{}') };
 const money = (v) => new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 }).format(v) + ' FCFA';
 const qs = (s) => document.querySelector(s);
 
-const BADGE_CLASS = {
-  'Populaire':    'sb-green',
-  'Nouveauté':   'sb-blue',
-  'Sur commande': 'sb-gray',
-  'Premium':      'sb-gold'
-};
 
 function saveCart() {
   localStorage.setItem('soxnaCart', JSON.stringify(state.cart));
@@ -86,33 +80,35 @@ function renderProducts() {
   const container = qs('[data-products]');
   const term = qs('[data-search]').value.toLowerCase();
   const filter = qs('[data-filter]').value;
-  const visible = products.filter((p) =>
-    (p.name.toLowerCase().includes(term) || p.desc.toLowerCase().includes(term)) &&
-    (filter === 'all' || p.category === filter)
-  );
+  const visible = products.filter((p) => {
+    const lp = window.SMX.tProduct(p.id);
+    return (lp.name.toLowerCase().includes(term) || lp.desc.toLowerCase().includes(term)) &&
+      (filter === 'all' || p.category === filter);
+  });
 
   container.innerHTML = visible.length
     ? visible.map((p, i) => {
+        const lp = window.SMX.tProduct(p.id);
         const qty = state.cart[p.id] || 0;
         return `
-        <article class="product-card" data-open="${p.id}" style="animation-delay:${i * 0.07}s" role="button" tabindex="0" aria-label="Voir ${p.name}">
+        <article class="product-card" data-open="${p.id}" style="animation-delay:${i * 0.07}s" role="button" tabindex="0" aria-label="${lp.name}">
           <div class="media-wrap">
-            <span class="product-badge badge-${p.category}">${p.categoryLabel}</span>
-            ${p.badge ? `<span class="status-badge ${BADGE_CLASS[p.badge] || ''}">${p.badge}</span>` : ''}
-            <img src="${p.image}" alt="${p.name}" loading="lazy">
-            <div class="card-hover-hint">Voir le détail</div>
+            <span class="product-badge badge-${p.category}">${lp.categoryLabel}</span>
+            ${lp.badge ? `<span class="status-badge ${window.SMX.badgeClass(lp.badge)}">${lp.badge}</span>` : ''}
+            <img src="${p.image}" alt="${lp.name}" loading="lazy">
+            <div class="card-hover-hint">${window.SMX.t('hover.hint')}</div>
           </div>
           <div class="product-info">
-            <h3>${p.name}</h3>
-            <p>${p.desc}</p>
+            <h3>${lp.name}</h3>
+            <p>${lp.desc}</p>
             <div class="price-row">
               <strong class="price">${money(p.price)}</strong>
-              <button class="add${qty > 0 ? ' in-cart' : ''}" data-add="${p.id}" aria-label="Ajouter ${p.name}">${qty > 0 ? `×${qty}` : '+'}</button>
+              <button class="add${qty > 0 ? ' in-cart' : ''}" data-add="${p.id}" aria-label="${lp.name}">${qty > 0 ? `×${qty}` : '+'}</button>
             </div>
           </div>
         </article>`;
       }).join('')
-    : '<p class="no-results">Aucun produit trouvé.</p>';
+    : `<p class="no-results">${window.SMX.t('no.results')}</p>`;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -144,11 +140,13 @@ function updateCart() {
   if (mobileCount) mobileCount.textContent = count;
   qs('[data-cart-total]').textContent = money(total);
   qs('[data-cart-items]').innerHTML = items.length
-    ? items.map((item) => `
+    ? items.map((item) => {
+        const lp = window.SMX.tProduct(item.id);
+        return `
       <div class="cart-item">
-        <img src="${item.image}" alt="${item.name}">
+        <img src="${item.image}" alt="${lp.name}">
         <div>
-          <h4>${item.name}</h4>
+          <h4>${lp.name}</h4>
           <small>${money(item.price)} × ${item.qty}</small>
         </div>
         <div class="qty">
@@ -156,8 +154,9 @@ function updateCart() {
           <strong>${item.qty}</strong>
           <button data-inc="${item.id}">+</button>
         </div>
-      </div>`).join('')
-    : '<p class="empty-cart">Panier vide — explorez le catalogue ☕</p>';
+      </div>`;
+      }).join('')
+    : `<p class="empty-cart">${window.SMX.t('cart.empty')}</p>`;
   updateWhatsapp();
   saveCart();
   renderProducts();
@@ -166,11 +165,15 @@ function updateCart() {
 function updateWhatsapp() {
   const items = cartItems();
   const total = items.reduce((s, i) => s + i.qty * i.price, 0);
-  const name  = qs('[data-customer-name]').value  || 'Client';
-  const phone = qs('[data-customer-phone]').value || 'Non renseigné';
-  const note  = qs('[data-customer-note]').value  || 'Aucune note';
-  const lines = items.map((i) => `- ${i.name} ×${i.qty} = ${money(i.qty * i.price)}`).join('%0A');
-  const msg = `Bonjour SOXNA MOMY,%0A%0AJe souhaite commander :%0A${lines || '- Panier vide'}%0A%0A*Total : ${money(total)}*%0ANom : ${name}%0ATél : ${phone}%0ANote : ${note}`;
+  const T = window.SMX.t;
+  const name  = qs('[data-customer-name]').value  || T('wa.default.name');
+  const phone = qs('[data-customer-phone]').value || T('wa.default.phone');
+  const note  = qs('[data-customer-note]').value  || T('wa.default.note');
+  const lines = items.map((i) => {
+    const lp = window.SMX.tProduct(i.id);
+    return `- ${lp.name} ×${i.qty} = ${money(i.qty * i.price)}`;
+  }).join('%0A');
+  const msg = `${T('wa.hello')}%0A%0A${T('wa.order')}%0A${lines || T('wa.empty')}%0A%0A*${T('wa.total')} ${money(total)}*%0A${T('wa.name')} ${name}%0A${T('wa.phone')} ${phone}%0A${T('wa.note')} ${note}`;
   const btn = qs('[data-whatsapp]');
   btn.href = `https://wa.me/${phoneNumber}?text=${msg}`;
   const empty = items.length === 0;
@@ -181,14 +184,15 @@ function updateWhatsapp() {
 
 /* ── MODAL ── */
 function openModal(product) {
+  const lp = window.SMX.tProduct(product.id);
   const backdrop = qs('[data-modal-backdrop]');
   qs('[data-modal-img]').src = product.image;
-  qs('[data-modal-img]').alt = product.name;
+  qs('[data-modal-img]').alt = lp.name;
   const badgeEl = qs('[data-modal-badge]');
-  badgeEl.textContent = product.categoryLabel;
+  badgeEl.textContent = lp.categoryLabel;
   badgeEl.className = `product-badge badge-${product.category}`;
-  qs('[data-modal-name]').textContent = product.name;
-  qs('[data-modal-details]').textContent = product.details;
+  qs('[data-modal-name]').textContent = lp.name;
+  qs('[data-modal-details]').textContent = lp.details;
   qs('[data-modal-price]').textContent = money(product.price);
   qs('[data-modal-add]').dataset.add = product.id;
   backdrop.classList.add('show');
@@ -287,3 +291,8 @@ document.querySelectorAll('.customer-input').forEach((el) => el.addEventListener
 
 renderProducts();
 updateCart();
+
+document.addEventListener('smx:langchange', () => {
+  renderProducts();
+  updateCart();
+});
