@@ -17,7 +17,7 @@ const products = [
   },
   {
     id: 'cafe-1kg', name: 'KAFE TUUBAA SOXNA MOMY 1kg', category: 'cafe', categoryLabel: 'Café',
-    price: 6500, badge: 'Sur commande',
+    price: 6500, badge: null,
     image: 'mes%20images%20produits/cafe1kg.png',
     desc: 'Café 95% + poivre de Sélim. Grand format pour consommation familiale ou revente.',
     details: 'Café 95% pur + poivre de Sélim. Grand sachet kraft 1kg — le format idéal pour la revente en boutique ou une forte consommation familiale. Préparez votre commande à l\'avance, ce format est fabriqué sur commande. Contactez-nous via WhatsApp pour délai et disponibilité.'
