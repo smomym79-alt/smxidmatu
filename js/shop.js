@@ -11,35 +11,35 @@ const products = [
   {
     id: 'cafe-500', name: 'KAFE TUUBAA SOXNA MOMY 500g', category: 'cafe', categoryLabel: 'Café',
     price: 3500, badge: null,
-    image: 'mes%20images%20produits/photo_2026-06-15_18-14-41.jpg',
+    image: 'mes%20images%20produits/caf%C3%A9500g.png',
     desc: 'Café 95% + poivre de Sélim. Format équilibré pour familles et revendeurs.',
     details: 'Café 95% pur + poivre de Sélim. Sachet aluminium 500g — le format équilibré pour une consommation familiale régulière ou les revendeurs débutants. Goût intense, arôme unique, bienfaits reconnus. Idéal pour les boutiques qui souhaitent proposer KAFE TUUBAA à leur clientèle.'
   },
   {
     id: 'cafe-1kg', name: 'KAFE TUUBAA SOXNA MOMY 1kg', category: 'cafe', categoryLabel: 'Café',
     price: 6500, badge: 'Sur commande',
-    image: 'mes%20images%20produits/photo_2026-06-15_18-14-54.jpg',
+    image: 'mes%20images%20produits/cafe1kg.png',
     desc: 'Café 95% + poivre de Sélim. Grand format pour consommation familiale ou revente.',
     details: 'Café 95% pur + poivre de Sélim. Grand sachet kraft 1kg — le format idéal pour la revente en boutique ou une forte consommation familiale. Préparez votre commande à l\'avance, ce format est fabriqué sur commande. Contactez-nous via WhatsApp pour délai et disponibilité.'
   },
   {
     id: 'arach-150', name: 'Arachides enrobées 150g', category: 'arachides', categoryLabel: 'Arachides',
     price: 1000, badge: 'Populaire',
-    image: 'mes%20images%20produits/photo_2026-06-15_19-59-13.jpg',
+    image: 'mes%20images%20produits/arachide150g.png',
     desc: 'Sachet souple 150g. Snack croquant parfait pour les pauses et la vente en boutique.',
     details: 'Arachides enrobées croquantes SOXNA MOMY — format sachet souple transparent 150g. Pratique, léger, facile à glisser dans un sac ou à disposer en boutique. Le snack préféré des amateurs de saveurs authentiques. Idéal pour les revendeurs de rue, les boutiques et les occasions.'
   },
   {
     id: 'arach-250', name: 'Arachides enrobées 250g', category: 'arachides', categoryLabel: 'Arachides',
     price: 1750, badge: 'Nouveauté',
-    image: 'mes%20images%20produits/photo_2026-06-15_19-59-08.jpg',
+    image: 'mes%20images%20produits/arachide250g.png',
     desc: 'Pot moyen 250g. Idéal pour offrir ou partager lors d\'un événement.',
     details: 'Arachides enrobées croquantes SOXNA MOMY — pot moyen transparent 250g avec étiquette officielle. Un format parfait pour offrir à un proche, poser sur une table lors d\'un événement ou revendre en boutique avec une belle présentation. Produit artisanal, fabriqué à Keur Massar.'
   },
   {
     id: 'arach-500', name: 'Arachides enrobées 500g', category: 'arachides', categoryLabel: 'Arachides',
     price: 3500, badge: null,
-    image: 'mes%20images%20produits/photo_2026-06-15_19-59-16.jpg',
+    image: 'mes%20images%20produits/arachide500g.png',
     desc: 'Grand pot 500g. Notre format le plus vendu pour familles et revendeurs.',
     details: 'Arachides enrobées croquantes SOXNA MOMY — grand pot rectangulaire 500g. Notre format le plus vendu, plébiscité par les familles et les revendeurs. Présentation soignée avec étiquette SOXNA MOMY bien visible. Idéal pour les boutiques, marchés et grandes occasions.'
   },
