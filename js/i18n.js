@@ -72,12 +72,7 @@
       'wa.default.note': 'Aucune note',
       'toast.added': '✓ Ajouté au panier',
       'toast.whatsapp': '✓ WhatsApp ouvert — finalisez l\'envoi',
-      'meta.desc': 'KAFE TUUBAA SOXNA MOMY (95% café + poivre de Sélim) et arachides enrobées croquantes. Commandez directement depuis Keur Massar, Dakar.',
-      'reviews.eyebrow': 'Avis clients',
-      'reviews.h2': 'Ce que disent nos clients',
-      'review1.text': '"Un café d\'exception ! L\'arôme du poivre de Sélim est unique, ça fait vraiment la différence. Je commande le 500g toutes les semaines."',
-      'review2.text': '"Les arachides enrobées sont irrésistibles. Toute ma famille en redemande. Je prends maintenant le grand format 1kg pour avoir du stock."',
-      'review3.text': '"J\'ai commandé le coffret cadeau pour un mariage, l\'emballage était soigné et la livraison rapide. Tout le monde a adoré !"'
+      'meta.desc': 'KAFE TUUBAA SOXNA MOMY (95% café + poivre de Sélim) et arachides enrobées croquantes. Commandez directement depuis Keur Massar, Dakar.'
     },
     en: {
       'nav.cafe': '☕ Coffee',
@@ -149,12 +144,7 @@
       'wa.default.note': 'No note',
       'toast.added': '✓ Added to cart',
       'toast.whatsapp': '✓ WhatsApp opened — complete your order',
-      'meta.desc': 'KAFE TUUBAA SOXNA MOMY (95% coffee + Selim pepper) and crunchy coated peanuts. Order directly from Keur Massar, Dakar.',
-      'reviews.eyebrow': 'Customer reviews',
-      'reviews.h2': 'What our customers say',
-      'review1.text': '"An exceptional coffee! The Selim pepper aroma is unique, it really makes a difference. I order the 500g every week."',
-      'review2.text': '"The coated peanuts are irresistible. My whole family keeps asking for more. I now get the large 1kg format to keep in stock."',
-      'review3.text': '"I ordered the gift box for a wedding, the packaging was neat and delivery fast. Everyone loved it!"'
+      'meta.desc': 'KAFE TUUBAA SOXNA MOMY (95% coffee + Selim pepper) and crunchy coated peanuts. Order directly from Keur Massar, Dakar.'
     },
     es: {
       'nav.cafe': '☕ Café',
@@ -226,12 +216,7 @@
       'wa.default.note': 'Sin nota',
       'toast.added': '✓ Añadido al carrito',
       'toast.whatsapp': '✓ WhatsApp abierto — finaliza tu pedido',
-      'meta.desc': 'KAFE TUUBAA SOXNA MOMY (95% café + pimienta de Selim) y cacahuetes rebozados crujientes. Pide directamente desde Keur Massar, Dakar.',
-      'reviews.eyebrow': 'Opiniones de clientes',
-      'reviews.h2': 'Lo que dicen nuestros clientes',
-      'review1.text': '"¡Un café excepcional! El aroma de la pimienta de Selim es único, marca realmente la diferencia. Pido el de 500g todas las semanas."',
-      'review2.text': '"Los cacahuetes rebozados son irresistibles. Toda mi familia pide más. Ahora compro el gran formato de 1kg para tener stock."',
-      'review3.text': '"Pedí la cesta regalo para una boda, el embalaje era cuidado y la entrega rápida. ¡A todos les encantó!"'
+      'meta.desc': 'KAFE TUUBAA SOXNA MOMY (95% café + pimienta de Selim) y cacahuetes rebozados crujientes. Pide directamente desde Keur Massar, Dakar.'
     }
   };
 
