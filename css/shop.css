@@ -247,3 +247,30 @@ footer p{font-size:.9rem;line-height:2;margin:0;color:#9dc4a0}
   .footer-bottom{flex-direction:column;gap:4px}
   .modal-footer{flex-direction:column;align-items:stretch}
 }
+
+/* ── TESTIMONIALS ── */
+.testimonials{background:var(--cream)}
+.testimonials-head{text-align:center;margin-bottom:40px}
+.testimonials-head h2{margin:0}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review-card{background:white;border:1.5px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:.25s}
+.review-card:hover{box-shadow:0 18px 50px rgba(5,46,22,.1);border-color:#a7d6a0}
+.review-stars{color:var(--gold);font-size:1.1rem;letter-spacing:.1em}
+.review-card p{color:var(--muted);line-height:1.72;font-size:.93rem;margin:0;flex:1;font-style:italic}
+.review-footer{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:14px}
+.review-footer strong{font-size:.9rem;color:var(--ink);font-weight:800}
+.review-footer span{font-size:.78rem;color:var(--muted);font-weight:700}
+
+/* ── WA FLOAT ── */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:36;width:58px;height:58px;border-radius:50%;background:#25d366;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,.45);transition:.2s;cursor:pointer}
+.wa-float:hover{transform:scale(1.09);box-shadow:0 12px 36px rgba(37,211,102,.55)}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(14px);background:var(--forest-dark);color:white;padding:12px 24px;border-radius:999px;font-size:.88rem;font-weight:800;z-index:80;opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:820px){
+  .reviews-grid{grid-template-columns:1fr}
+  .wa-float{bottom:76px;right:16px;width:52px;height:52px}
+  .toast{bottom:80px}
+}

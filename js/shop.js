@@ -79,6 +79,15 @@ function moneyEur(eur) {
 }
 
 
+function showToast(msg) {
+  var el = document.querySelector('.toast');
+  if (!el) { el = document.createElement('div'); el.className = 'toast'; document.body.appendChild(el); }
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(el._t);
+  el._t = setTimeout(function () { el.classList.remove('show'); }, 2800);
+}
+
 function saveCart() {
   localStorage.setItem('soxnaCart', JSON.stringify(state.cart));
 }
@@ -240,7 +249,7 @@ document.addEventListener('click', (e) => {
     state.cart[addId] = (state.cart[addId] || 0) + 1;
     updateCart();
     bounceCartCount();
-    // If triggered from modal, close modal and open cart
+    showToast(window.SMX.t('toast.added'));
     if (e.target.closest('[data-modal-backdrop]')) { closeModal(); openCart(); }
     else { openCart(); }
   }
@@ -253,6 +262,8 @@ document.addEventListener('click', (e) => {
 
   if (e.target.closest('[data-cart-open]')) openCart();
   if (e.target.closest('[data-cart-close]') || e.target.matches('[data-overlay]')) closeCart();
+  const waBtn = e.target.closest('[data-whatsapp]');
+  if (waBtn && !waBtn.classList.contains('btn-disabled')) showToast(window.SMX.t('toast.whatsapp'));
   if (e.target.closest('[data-clear]')) { state.cart = {}; updateCart(); }
 
   // Modal: open on card click (but not on the + button)
